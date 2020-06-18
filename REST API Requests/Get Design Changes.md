@@ -8,7 +8,7 @@ as to be lined up with the RESTful standard, add an authentication string, etc.
 Using curl, a standard get request looks like:
 
 ```
-curl -X GET "http://localhost/api/v2.0.0/status" -H "accept: application/json" -H "Authorization: Basic <AuthString>" -H "Accept-Language: en_US"
+curl -X GET "http://192.168.1.173/api/v2.0.0/status" -H "accept: application/json" -H "Authorization: Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA==" -H "Accept-Language: en_US"
 ```
 
 We can use the `-v` extension to get the verbose request and see what the headers actually are. It returns:
