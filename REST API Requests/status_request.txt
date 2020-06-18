@@ -1,0 +1,9 @@
+curl -X GET "http://localhost/api/v2.0.0/status" -H "accept: application/json" -H "Authorization: Basic <AuthString>" -H "Accept-Language: en_US" -v 
+
+The actual request headers are sent as:
+GET /api/v2.0.0/status HTTP/1.1
+Host: localhost
+User-Agent: curl/7.47.0
+accept: application/json
+Authorization: Basic <AuthString>
+Accept-Language: en_US
