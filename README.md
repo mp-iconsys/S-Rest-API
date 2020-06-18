@@ -14,11 +14,11 @@ The Library was designed with straightforward calls in mind. It **does not** sup
 ## API Design Breakdown
 
 For a detailed breakdown of the code changes see the individual pages:
-* [GET](/REST API Requests/Get Design Changes.md)
+* [GET](REST API Requests/Get Design Changes.md)
 * [PUSH](#)
 * [PULL](#)
 * [DELETE](#)
 
 ## LHTTP Library
 
-It's really well documented and the installation + implementation details are straightforward. See [this link](https://support.industry.siemens.com/cs/document/109763879/library-for-http-communication-(lhttp)?dti=0&lc=en-US) for more details. If not available, see [the link in Documentation](/Documentation/LHTTP Original Documentation.pdf).
+It's really well documented and the installation + implementation details are straightforward. See [this link](https://support.industry.siemens.com/cs/document/109763879/library-for-http-communication-(lhttp)?dti=0&lc=en-US) for more details. If not available, see [the link in Documentation](Documentation/LHTTP Original Documentation.pdf).
