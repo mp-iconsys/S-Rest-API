@@ -3,6 +3,10 @@ A solution to consume and post REST API within Siemens S7 PLCs.
 
 ## Background
 
+REST and HTTP...
+
+Siemens S7 stuff...
+
 ## Design
 
 The LHTTP library has been used as a starting point for making HTTP requests and receiving data. It's been extended insofar as adding additional parameters for configuring the header details and adding function blocks to decode/encode simple parameters from/into the JSON format. Two additional methods, PUT and DELETE, have been also added. 
@@ -14,6 +18,10 @@ The Library was designed with straightforward calls in mind. It **does not** sup
 ## API Design Breakdown
 
 In short, the comms were left largely untouched. From a functional perspective there's no difference between an HTTP and a REST request beyond standard conventions. In fact, REST communicates via http protocols so in a sense it's a simple extension of what's already implemented.
+
+For a detailed breakdown of the HTTP protocol see:
+* [w3.org](https://www.w3.org/Protocols/HTTP/1.1/rfc2616bis/draft-lafon-rfc2616bis-03.html)
+* [iana.org](https://www.iana.org/assignments/message-headers/message-headers.xml#perm-headers)
 
 The general structure of the messages between the server and the client can be broken down as follows:
 
