@@ -1,0 +1,16 @@
+Example 1. Delete a specific error log
+
+curl -X DELETE "http://192.168.0.124/api/v2.0.0/log/error_reports/14" -H "accept: application/json" -H "Authorization: Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA==" -H "Accept-Language: en_US" -v
+
+Header:
+
+DELETE /api/v2.0.0/log/error_reports/15 HTTP/1.1
+Host: 192.168.0.124
+User-Agent: curl/7.55.1
+accept: application/json
+Authorization: Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA==
+Accept-Language: en_US
+
+Successfull HTTP response has code 204.
+
+This is basically just like a GET only you change the method at the very begining... should really be one function
