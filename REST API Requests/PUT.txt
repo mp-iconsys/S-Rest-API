@@ -1,0 +1,36 @@
+Example 1. Issue a new value and label to a register
+
+curl -X PUT "http://192.168.0.124/api/v2.0.0/registers/1" -H "accept: application/json" -H "Authorization: Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA==" -H "Accept-Language: en_US" -H "Content-Type: application/json" -d "{ \"value\": 2, \"label\": \"miko\"}" -v
+
+This is basically just like a post request. Same rules for data formatting apply: keep it in JSON format, letter case is important and you don't need to escape any characters or worry about indendation.
+
+Header:
+
+PUT /api/v2.0.0/registers/1 HTTP/1.1
+Host: 192.168.0.124
+User-Agent: curl/7.55.1
+accept: application/json
+Authorization: Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA==
+Accept-Language: en_US
+Content-Type: application/json
+Content-Length: 30
+
+Data:
+
+{
+  "value": 2,
+  "label": "miko"
+}
+
+Raw Header & Data Combined:
+
+PUT /api/v2.0.0/registers/1 HTTP/1.1
+Host: 192.168.0.241
+User-Agent: curl/7.55.1
+accept: application/json
+Authorization: Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA==
+Accept-Language: en_US
+Content-Type: application/json
+Content-Length: 30
+
+{ "value": 2, "label": "miko"}

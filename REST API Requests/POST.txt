@@ -1,0 +1,53 @@
+Example 1. A request to create a new software backup (no content data)
+
+curl -X POST "http://192.168.0.124/api/v2.0.0/software/backups" -H "accept: application/json" -H "Authorization: Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA==" -H "Accept-Language: en_US" -v
+
+This POST request doesn't require any parameters. See Example 2 for feeding parameters.
+
+Header:
+
+POST /api/v2.0.0/software/backups HTTP/1.1
+Host: 192.168.0.124
+User-Agent: curl/7.55.1
+accept: application/json
+Authorization: Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA==
+Accept-Language: en_US
+
+Data: ''
+
+You should get HTTP response 201
+
+Example 2. A request to generate a new error report (with content data)
+
+curl -X POST "http://192.168.0.124/api/v2.0.0/log/error_reports" -H "accept: application/json" -H "Authorization: Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA==" -H "Accept-Language: en_US" -H "Content-Type: application/json" -d "{ \"description\": \"string\"}" -v
+
+This POST request does require submitting data. In the curl command this is specified after the '-d' command. 
+Take note that this data needs to be submitted in JSON format. Indentation does not need to be preserved but letter case does. So, "Description" != "description"
+
+Header:
+
+POST /api/v2.0.0/log/error_reports HTTP/1.1
+Host: 192.168.0.124
+User-Agent: curl/7.55.1
+accept: application/json
+Authorization: Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA==
+Accept-Language: en_US
+Content-Type: application/json
+Content-Length: 26
+
+Data: {"description": "string"}
+
+Full Raw Request:
+
+POST /api/v2.0.0/log/error_reports HTTP/1.1
+Host: 192.168.0.124
+User-Agent: curl/7.55.1
+accept: application/json
+Authorization: Basic YWRtaW46OGM2OTc2ZTViNTQxMDQxNWJkZTkwOGJkNGRlZTE1ZGZiMTY3YTljODczZmM0YmI4YTgxZjZmMmFiNDQ4YTkxOA==
+Accept-Language: en_US
+Content-Type: application/json
+Content-Length: 24
+
+{"description": "Hello"}
+
+In terms of the PLC, make sure that the internal receive buffers are big enough for the content. If you're getting any errors it's probably on them.
