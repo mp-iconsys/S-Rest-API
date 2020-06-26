@@ -3,9 +3,14 @@ A solution to consume and post REST API within Siemens S7 PLCs.
 
 ## Contents
 
+1. [Overview](#Overview)
+1. [Rest API Breakdown](#REST-API-Breakdown)
+1. [JSON Handling](#JSON-Handling)
+1. [Installation](#Installation)
+1. [Use Examples](#Use-Examples)
+1. [Extra Documentation](#Extra-Documentation)
 
-
-## Design
+## Overview
 
 The [LHTTP](https://support.industry.siemens.com/cs/document/109763879/library-for-http-communication-(lhttp)?dti=0&lc=en-WW) library has been used as a starting point for making HTTP requests and receiving data. It's been extended and tested to consume REST API. Two additional methods, PUT and DELETE, have been added and several features removed, to enable backwards-compatibility with S7-1200 PLCs. These were the SSL security protections and the DNS domain resolution.
 
@@ -80,9 +85,9 @@ For a detailed breakdown of the code changes see the individual pages:
 ## Installation
 
 
-## Use Cases & Examples
+## Use Examples
 
 
-## LHTTP Library & Documentation
+## Extra Documentation
 
 It's really well documented and the installation + implementation details are straightforward. See [this link](https://support.industry.siemens.com/cs/document/109763879/library-for-http-communication-(lhttp)?dti=0&lc=en-US) for more details. If not available, see [the link in Documentation](<Documentation/LHTTP Original Documentation.pdf>).
