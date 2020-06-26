@@ -12,9 +12,9 @@ A solution to consume and post REST API within Siemens S7 PLCs.
 
 ## Overview
 
-The [LHTTP](https://support.industry.siemens.com/cs/document/109763879/library-for-http-communication-(lhttp)?dti=0&lc=en-WW) library has been used as a starting point for making HTTP requests and receiving data. It's been extended and tested to consume REST API. Two additional methods, PUT and DELETE, have been added and several features removed, to enable backwards-compatibility with S7-1200 PLCs. These were the SSL security protections and the DNS domain resolution.
+The [LHTTP](https://support.industry.siemens.com/cs/document/109763879/library-for-http-communication-(lhttp)?dti=0&lc=en-WW) library has been used as a starting point for making HTTP requests and receiving data. It's been extended to consume REST API. Two additional methods, PUT and DELETE, have been added and several features removed, to enable backwards-compatibility with S7-1200 PLCs. These were mainly the SSL security protections and the DNS domain resolution.
 
-The code has been designed and tested on SIMATIC S7-1500 CPU 1516-3 PN/DP, Article 6ES7516-3AN01-0AB0. It uses dynamic array sizes which are only supported for firmware **version >= 2.0** on S7-1500 and firmware **version >= 4.2** on S7-1200. 
+The code has been designed and tested on SIMATIC S7-1500 CPU 1516-3 PN/DP, Article 6ES7516-3AN01-0AB0. It uses dynamic array sizes which are only supported for firmware **version >= 2.0** on S7-1500 and firmware **version >= 4.2** on S7-1200. It has been compiled on SIMATIC S7-1200 1214FC DC/DC/DC, Article 6ES7 214-1AF40-0XB0 but it hasn't been tested due to unavailability of the device on PLCSIM Advanced.
 
 The Library was designed with straightforward requests in mind. It **does not** support:
 * Decoding or Encoding JSON content. The data is stored as a char array and no serialization is supported
@@ -22,7 +22,7 @@ The Library was designed with straightforward requests in mind. It **does not** 
 
 ## REST API Breakdown
 
-In short, the comms were left largely untouched. From a functional perspective there's no difference between an HTTP and a REST request beyond standard conventions. In fact, REST communicates via http protocols so in a sense it's a simple extension of what's already implemented.
+From a functional perspective there's no difference between an HTTP and a REST request beyond standard conventions. In fact, REST communicates via the http protocol so in a sense it's a simple extension of what's already implemented.
 
 For a detailed breakdown of the HTTP protocol see:
 * [w3.org](https://www.w3.org/Protocols/HTTP/1.1/rfc2616bis/draft-lafon-rfc2616bis-03.html)
@@ -30,8 +30,10 @@ For a detailed breakdown of the HTTP protocol see:
 
 ### Useful Resources
 
-Below are several useful links for REST testing:
-
+Below are several useful links that have been used in testing:
+* [https://reqbin.com/](https://reqbin.com/) for REST testing
+* CURL has been used extensively to check the requests. Use `-v` for verbose logging - to see all header details
+* In addition, [Socket Test](https://sourceforge.net/projects/sockettest/) was used to listen 
 
 
 The general structure of the messages between the server and the client can be broken down as follows:
