@@ -257,8 +257,6 @@ The steps to integrate the library into your program are straightforward.
 
 ![GET Block](Documentation/REST_Get_Block_cropped.png)
 
-Insert REST_Get_Block_cropped.png
-
 Important notes:
 
 * Make sure the connection parameter is configured with the correct hardware and the IP address matches the one in the url
