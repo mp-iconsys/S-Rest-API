@@ -255,6 +255,8 @@ The steps to integrate the library into your program are straightforward.
 1. In the libraries tab, open the `REST v01` library. You'll find the function blocks in the Types section and default Data Blocks in the Master copies section. Copy the blocks needed for your project.
 1. It's a good idea to use the data blocks as a starting point. See below for how a typical FB would look like, using the provided DBs:
 
+![GET Block](Documentation/REST_Get_Block_cropped.png)
+
 Insert REST_Get_Block_cropped.png
 
 Important notes:
